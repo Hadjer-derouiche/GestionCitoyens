@@ -16,8 +16,20 @@ public class ActeNaissance {
     Citoyen citoyen;
     
     
-    public ActeNaissance() {
-    }
+    public ActeNaissance(int idN) {
+        idActeNais = idN;
+      }
+  
+  
+  
+      public ActeNaissance(int idN, Femme m, Homme p, Citoyen c) {
+          idActeNais = idN;
+          mere = m;
+          pere = p;
+          citoyen = c;
+      }
+  
+  
     
     /**
      * getter and setter

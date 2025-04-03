@@ -2,6 +2,7 @@ package Modele;
 
 
 import java.io.*;
+import java.time.LocalDate;
 import java.util.*;
 
 /**
@@ -15,14 +16,30 @@ public class Citoyen {
     private int id;
     private String nom;
     private String prenom;
-    private Date dateNaiss;
+    private LocalDate dateNaiss;
     
     ActeDeces deces;
     ActeNaissance acteNaiss;
     Mairie mairie;
     
-    public Citoyen() {
-    }
+    public Citoyen(int idC, String n, String p, LocalDate dateNais) {
+		id = idC;
+		nom = n;
+		prenom = p;
+		dateNaiss = dateNais;
+	}
+
+
+
+
+	public Citoyen(int idC, String n, String p, LocalDate dateNais,Mairie m) {
+		id = idC;
+		nom = n;
+		prenom = p;
+		dateNaiss = dateNais;
+		mairie = m;
+	}
+
 
     /**
      * getter and setter
@@ -51,11 +68,11 @@ public class Citoyen {
         this.prenom = prenom;
     }
 
-    public Date getDateNaiss() {
+    public LocalDate getDateNaiss() {
         return dateNaiss;
     }
 
-    public void setDateNaiss(Date dateNaiss) {
+    public void setDateNaiss(LocalDate dateNaiss) {
         this.dateNaiss = dateNaiss;
     }
     

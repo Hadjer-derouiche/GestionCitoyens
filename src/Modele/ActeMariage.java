@@ -16,8 +16,22 @@ public class ActeMariage {
     Homme Conjoint;
     Mairie mairie;
 
-     public ActeMariage() {
-    }
+    public ActeMariage(boolean d, int idm) {
+		div = d;
+		idActMariage = idm;
+	}
+    
+    
+
+
+	public ActeMariage(boolean d, int idm, Femme cf, Homme ch, Mairie m) {
+		div = d;
+		idActMariage = idm;
+		Conjointe = cf;
+		Conjoint = ch;
+		mairie = m;
+	}
+	
      
     /**
      * getter and setter
